@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "652"
+	"mapversion" "653"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "652"
+	"mapversion" "653"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -105431,10 +105431,10 @@ entity
 	"classname" "info_overlay"
 	"angles" "0 0 0"
 	"BasisNormal" "1 -0 0"
-	"BasisOrigin" "1792 -32 132"
+	"BasisOrigin" "1792 3.8147e-006 132"
 	"BasisU" "0 1 0"
 	"BasisV" "-0 0 1"
-	"EndU" "6"
+	"EndU" "8"
 	"EndV" "0"
 	"fademindist" "-1"
 	"material" "signage/indicator_lights/indicator_lights_wall"
@@ -105442,11 +105442,11 @@ entity
 	"StartU" "0"
 	"StartV" "1"
 	"targetname" "switch1_indicators"
-	"uv0" "-96 -4 0"
-	"uv1" "-96 4 0"
-	"uv2" "96 4 0"
-	"uv3" "96 -4 0"
-	"origin" "1792 -32 132"
+	"uv0" "-128 -4 0"
+	"uv1" "-128 4 0"
+	"uv2" "128 4 0"
+	"uv3" "128 -4 0"
+	"origin" "1792 3.8147e-006 132"
 	editor
 	{
 		"color" "80 150 225"
