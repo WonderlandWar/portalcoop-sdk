@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "218"
+	"mapversion" "220"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "218"
+	"mapversion" "220"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -122732,7 +122732,7 @@ entity
 		"OnPass" "elevator3_chime,PlaySound,,1,-1"
 		"OnPass" "elevator3_block,Disable,,1.5,-1"
 		"OnPass" "elevator3-4_endfades,Fade,,1,-1"
-		"OnPass" "endgame,Command,changelevel coop_1,0,-1"
+		"OnPass" "endgame,Command,changelevel p3coop_01,0,-1"
 	}
 	"origin" "2112 -952 1072"
 	editor
@@ -154665,98 +154665,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "15132"
-	"classname" "trigger_multiple"
-	"origin" "1856 -472 504"
-	"spawnflags" "1"
-	"StartDisabled" "0"
-	"wait" "1"
-	solid
-	{
-		"id" "15133"
-		side
-		{
-			"id" "18872"
-			"plane" "(1472 112 624) (2240 112 624) (2240 -1056 624)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 -1 0 0] 0.25"
-			"vaxis" "[-1 0 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "18871"
-			"plane" "(2240 112 384) (1472 112 384) (1472 -1056 384)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[-1 0 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "18870"
-			"plane" "(1472 112 384) (2240 112 384) (2240 112 624)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[-1 0 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "18869"
-			"plane" "(2240 -1056 384) (1472 -1056 384) (1472 -1056 624)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "18868"
-			"plane" "(2240 112 384) (2240 -1056 384) (2240 -1056 624)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "18867"
-			"plane" "(1472 -1056 384) (1472 112 384) (1472 112 624)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 -1 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 15500]"
 	}
 }
 entity
