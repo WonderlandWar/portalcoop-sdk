@@ -1,0 +1,73 @@
+// Choreo version 1
+actor "Aperture_AI"
+{
+  channel "audio"
+  {
+    event speak "ding"
+    {
+      time 15.230127 15.420127
+      param "Portal.ding_off"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "PortalCoop.escape_00_part2_nag02-1"
+    {
+      time 6.453031 9.974165
+      param "PortalCoop.escape_00_part2_nag02-1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "PortalCoop.escape_01_part1_nag06-1"
+    {
+      time 13.503031 15.218586
+      param "PortalCoop.escape_01_part1_nag06-1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "PortalCoop.escape_01_part1_nag05-1"
+    {
+      time 10.103030 13.270218
+      param "PortalCoop.escape_01_part1_nag05-1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "PortalCoop.escape_00_part2_nag01-1"
+    {
+      time 0.353029 4.043619
+      param "PortalCoop.escape_00_part2_nag01-1"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+    event speak "ding"
+    {
+      time 0.155127 0.345127
+      param "Portal.ding_on"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+      cc_noattenuate
+    }
+  }
+}
+
+scalesettings
+{
+  "GestureTool" "100"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "CChoreoView" "60"
+}
+fps 60
+snap off
+ignorePhonemes off
