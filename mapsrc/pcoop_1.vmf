@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "653"
+	"mapversion" "654"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "653"
+	"mapversion" "654"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -47595,7 +47595,7 @@ entity
 	"classname" "func_door"
 	"disablereceiveshadows" "0"
 	"disableshadows" "0"
-	"dmg" "0"
+	"dmg" "1"
 	"forceclosed" "0"
 	"health" "0"
 	"ignoredebris" "0"
@@ -47706,7 +47706,7 @@ entity
 	"classname" "func_door"
 	"disablereceiveshadows" "0"
 	"disableshadows" "0"
-	"dmg" "0"
+	"dmg" "1"
 	"forceclosed" "0"
 	"health" "0"
 	"ignoredebris" "0"

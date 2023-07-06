@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "1124"
+	"mapversion" "1125"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -26,7 +26,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "1124"
+	"mapversion" "1125"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -36442,6 +36442,82 @@ world
 	}
 	solid
 	{
+		"id" "228944"
+		side
+		{
+			"id" "20422"
+			"plane" "(161 380 129) (161 292 129) (162 292 129)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 -3.55541] 0.28125"
+			"vaxis" "[0 -1 0 42.6668] 0.28125"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "20421"
+			"plane" "(162 380 129) (162 380 252) (161 380 252)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 -4] 0.25"
+			"vaxis" "[0 0 -1 4] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "20420"
+			"plane" "(161 292 129) (161 292 252) (162 292 252)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 -4] 0.25"
+			"vaxis" "[0 0 -1 4] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "20419"
+			"plane" "(161 292 252) (161 380 252) (162 380 252)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -16] 0.25"
+			"vaxis" "[-1 0 0 4] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "20418"
+			"plane" "(162 380 129) (162 292 129) (162 292 252)"
+			"material" "GLASS/GLASSWINDOW_FROSTED_004"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "20417"
+			"plane" "(161 292 129) (161 380 129) (161 380 252)"
+			"material" "GLASS/GLASSWINDOW_FROSTED_004"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 187 216"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	solid
+	{
 		"id" "6167"
 		side
 		{
@@ -49395,82 +49471,6 @@ world
 			"visgroupautoshown" "1"
 		}
 	}
-	solid
-	{
-		"id" "228944"
-		side
-		{
-			"id" "20422"
-			"plane" "(161 380 129) (161 292 129) (162 292 129)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 -3.55541] 0.28125"
-			"vaxis" "[0 -1 0 42.6668] 0.28125"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "20421"
-			"plane" "(162 380 129) (162 380 252) (161 380 252)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 -4] 0.25"
-			"vaxis" "[0 0 -1 4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "20420"
-			"plane" "(161 292 129) (161 292 252) (162 292 252)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 -4] 0.25"
-			"vaxis" "[0 0 -1 4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "20419"
-			"plane" "(161 292 252) (161 380 252) (162 380 252)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 1 0 -16] 0.25"
-			"vaxis" "[-1 0 0 4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "20418"
-			"plane" "(162 380 129) (162 292 129) (162 292 252)"
-			"material" "GLASS/GLASSWINDOW_FROSTED_004"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "20417"
-			"plane" "(161 292 129) (161 380 129) (161 380 252)"
-			"material" "GLASS/GLASSWINDOW_FROSTED_004"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "0 180 0"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
 	group
 	{
 		"id" "3778"
@@ -60438,7 +60438,7 @@ entity
 	"classname" "func_door"
 	"disablereceiveshadows" "0"
 	"disableshadows" "0"
-	"dmg" "0"
+	"dmg" "1"
 	"forceclosed" "0"
 	"health" "0"
 	"ignoredebris" "0"
@@ -60549,7 +60549,7 @@ entity
 	"classname" "func_door"
 	"disablereceiveshadows" "0"
 	"disableshadows" "0"
-	"dmg" "0"
+	"dmg" "1"
 	"forceclosed" "0"
 	"health" "0"
 	"ignoredebris" "0"
