@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	// Original shader: BaseTimesLightmap
+	"$basetexture" "Dev/gray_background_color"
+	"$selfillum" 1
+	"$surfaceprop" "concrete"
+	"$reflectivity" "[0 0 0]"
+	"$nodecal" "1"
+}
