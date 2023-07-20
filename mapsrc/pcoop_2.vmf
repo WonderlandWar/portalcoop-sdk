@@ -67459,6 +67459,7 @@ entity
 	"id" "71161"
 	"classname" "npc_security_camera"
 	"angles" "0 90 0"
+	"IsPCoopCamera" "1"
 	"model" "models/props/security_camera.mdl"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
@@ -130975,6 +130976,7 @@ entity
 	"id" "77494"
 	"classname" "npc_security_camera"
 	"angles" "0 90 0"
+	"IsPCoopCamera" "1"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
 	"spawnflags" "32"
@@ -130992,6 +130994,7 @@ entity
 	"id" "77450"
 	"classname" "npc_security_camera"
 	"angles" "0 90 0"
+	"IsPCoopCamera" "1"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
 	"spawnflags" "32"
@@ -131009,6 +131012,7 @@ entity
 	"id" "77422"
 	"classname" "npc_security_camera"
 	"angles" "0 180 0"
+	"IsPCoopCamera" "1"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
 	"spawnflags" "32"
@@ -131026,6 +131030,7 @@ entity
 	"id" "77396"
 	"classname" "npc_security_camera"
 	"angles" "0 180 0"
+	"IsPCoopCamera" "1"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
 	"spawnflags" "32"
@@ -137789,7 +137794,7 @@ cameras
 	camera
 	{
 		"position" "[1951.09 1426.59 73.907]"
-		"look" "[1951.01 1425.57 73.8281]"
+		"look" "[1951.67 1425.8 74.1966]"
 	}
 }
 cordon

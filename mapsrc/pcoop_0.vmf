@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "768"
+	"mapversion" "770"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -32,7 +32,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "768"
+	"mapversion" "770"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -44636,6 +44636,7 @@ entity
 	"id" "196352"
 	"classname" "npc_security_camera"
 	"angles" "0 0 0"
+	"IsPCoopCamera" "1"
 	"model" "models/props/security_camera.mdl"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
@@ -44754,6 +44755,7 @@ entity
 	"id" "196497"
 	"classname" "npc_security_camera"
 	"angles" "0 270 0"
+	"IsPCoopCamera" "1"
 	"model" "models/props/security_camera.mdl"
 	"modelscale" "1.0"
 	"PlayDestroyedScenes" "1"
