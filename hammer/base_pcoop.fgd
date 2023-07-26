@@ -810,6 +810,7 @@
 	output OnStartTouchAll(void) : "Fired when an entity starts touching this trigger, and no other entities are touching it. Only entities that passed this trigger's filters are considered."
 	output OnEndTouch(void) : "Fired when an entity stops touching this trigger. Only entities that passed this trigger's filters will cause this output to fire."
 	output OnEndTouchAll(void) : "Fires when an entity stops touching this trigger, and no other entities are touching it. Only entities that passed this trigger's filters are considered."
+	output OnAllPlayersTouching(void) : "Fires when all players are touching this trigger."
 ]
 
 @BaseClass = worldbase
@@ -2405,6 +2406,7 @@
 
 	// Inputs
 	input Display(void) : "Display the message text."
+	input SetMessage(string) : "Sets the message text."
 ]
 
 @PointClass base(Parentname, Angles) size(-2 -2 -2, 2 2 2) = point_enable_motion_fixup : 
@@ -6385,6 +6387,7 @@
 	input RequestPlayerHealth(void) 		: "Requests the current player's health from the proxy. This will fire the PlayerHealth output with the value."
 	output PlayerHealth(integer)			: "The player's current health value."
 	output PlayerMissedAR2AltFire(void)		: "Player fired an AR2 combine ball that didn't kill any enemies."
+	output OnCoopPing(void)					: "Player used the ping marker."
 
 	input SetFlashlightSlowDrain(void)		: "Puts the player's flashlight in slow-power-drain mode (for Episodic darkness)"
 	input SetFlashlightNormalDrain(void)		: "Puts the player's flashlight to default power drain"
@@ -6548,4 +6551,23 @@
 	parm8(instance_parm) : "Parm" : : "This is a parameter.  It goes in the form of $variable type."
 	parm9(instance_parm) : "Parm" : : "This is a parameter.  It goes in the form of $variable type."
 	parm10(instance_parm) : "Parm" : : "This is a parameter.  It goes in the form of $variable type."
+]
+
+// Portal Coop specific
+
+@PointClass base(Targetname) = game_player_manager : "Provides various player information"
+[
+	// Keys
+
+	// Inputs
+	input InMaxPlayerCount(void) : "Fires the OutMaxPlayerCount output"
+	input InPlayerCount(void) : "Fires the OutPlayerCount output"
+
+	// Outputs
+	output OnPlayerSpawn(void) : "Fired when a player spawns"
+	output OnPlayerJoin(void) : "Fired when a player joins"
+	output OnPlayerLeave(void) : "Fired when a player leaves"
+	
+	output OutMaxPlayerCount(integer) : "Outputs number of maxplayers"
+	output OutPlayerCount(integer) : "Outputs number of players connected"
 ]

@@ -274,6 +274,13 @@
 		0 : "No"
 		1 : "Yes"
 	]
+	ForceAlwaysUseSetID(choices)			: "Always Use Set ID" : 0 : "Picking up the portalgun will change the Linkage ID, should we disable this behavior?"	=
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	PortalLinkageGroupID(integer) : "Linkage Group ID" : 0 : ""
 
 	input ChargePortal1(void)		: "Does charge up effect for mounted portalgun."
 	input ChargePortal2(void)		: "Does charge up effect for mounted portalgun."
@@ -354,7 +361,8 @@
 		0 : "No"
 		1 : "Yes"
 	]
-
+	
+	IsPCoopCamera(integer)	readonly	: "Is PortalCoop Camera (Don't Change)"      : 1  : "(Don't change). Was this camera created using this FGD?"
 ]
 
 @PointClass base(Targetname, Angles, Studiomodel) studio( "models/props/telescopic_arm.mdl" ) = prop_telescopic_arm : "Telescopic Arm"
