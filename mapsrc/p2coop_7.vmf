@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "433"
+	"mapversion" "442"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "433"
+	"mapversion" "442"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -62076,6 +62076,7 @@ entity
 	"targetname" "template_brain_core"
 	"Template01" "brain_core_sphere_curious"
 	"Template03" "beam_to_core_easy"
+	"Template04" "enable_motion_trigger_curious"
 	"origin" "-3883.25 -2519.19 128.976"
 	editor
 	{
@@ -74732,7 +74733,6 @@ entity
 {
 	"id" "1755"
 	"classname" "trigger_vphysics_motion"
-	"angles" "8 90 0"
 	"filtername" "filter_brain_ball"
 	"origin" "-3264 -2931.6 31.57"
 	"ParticleTrailEndSize" "3"
@@ -74743,7 +74743,7 @@ entity
 	"SetAngVelocityScale" "1.0"
 	"SetGravityScale" "1.0"
 	"SetLinearForce" "100"
-	"SetLinearForceAngles" "8 186 0"
+	"SetLinearForceAngles" "8 90 0"
 	"SetVelocityLimit" "20"
 	"SetVelocityLimitDelta" "1"
 	"SetVelocityScale" "1.0"
@@ -91813,7 +91813,7 @@ entity
 		"OnTrigger" "ending_viewcontrol,EnableControlAllPlayers,,0,-1"
 		"OnTrigger" "song_ending,PlaySound,,3,-1"
 		"OnTrigger" "credits,RollOutroCredits,,3,-1"
-		"OnTrigger" "servercmd,Command,changelevel pcoop_0,63,-1"
+		"OnTrigger" "servercmd,Command,changelevel p2coop_0,63,-1"
 		"OnTrigger" "playerproxy,SuppressCrosshair,,0,-1"
 	}
 	"origin" "48 -976 16"
@@ -92518,6 +92518,102 @@ entity
 	editor
 	{
 		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "240726"
+	"classname" "trigger_once"
+	"origin" "-3884 -2520 125.46"
+	"spawnflags" "1"
+	"StartDisabled" "0"
+	"targetname" "enable_motion_trigger_curious"
+	connections
+	{
+		"OnStartTouch" "brain_core_sphere_curious,EnableMotion,,0,-1"
+	}
+	solid
+	{
+		"id" "240727"
+		side
+		{
+			"id" "13599"
+			"plane" "(-3860 -2540 153.46) (-3908 -2540 153.46) (-3908 -2500 153.46)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 -1 0 -48] 0.25"
+			"vaxis" "[-1 0 0 -48] 0.25"
+			"rotation" "0"
+			"lightmapscale" "64"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "13598"
+			"plane" "(-3860 -2500 105.46) (-3908 -2500 105.46) (-3908 -2540 105.46)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 -1 0 -48] 0.25"
+			"vaxis" "[-1 0 0 -48] 0.25"
+			"rotation" "0"
+			"lightmapscale" "64"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "13597"
+			"plane" "(-3908 -2500 105.46) (-3860 -2500 105.46) (-3860 -2500 153.46)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 48] 0.25"
+			"vaxis" "[0 0 -1 -10.1597] 0.25"
+			"rotation" "0"
+			"lightmapscale" "64"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "13596"
+			"plane" "(-3860 -2540 105.46) (-3908 -2540 105.46) (-3908 -2540 153.46)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 48] 0.25"
+			"vaxis" "[0 0 -1 -10.1597] 0.25"
+			"rotation" "0"
+			"lightmapscale" "64"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "13595"
+			"plane" "(-3860 -2500 105.46) (-3860 -2540 105.46) (-3860 -2540 153.46)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 -1 0 -48] 0.25"
+			"vaxis" "[0 0 -1 -10.1597] 0.25"
+			"rotation" "0"
+			"lightmapscale" "64"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "13594"
+			"plane" "(-3908 -2540 105.46) (-3908 -2500 105.46) (-3908 -2500 153.46)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 -1 0 -48] 0.25"
+			"vaxis" "[0 0 -1 -10.1597] 0.25"
+			"rotation" "0"
+			"lightmapscale" "64"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "235 164 0"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "235 164 0"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
