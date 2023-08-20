@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "774"
+	"mapversion" "784"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -32,7 +32,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "774"
+	"mapversion" "784"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -67661,19 +67661,9 @@ entity
 entity
 {
 	"id" "109265"
-	"classname" "prop_dynamic"
+	"classname" "prop_portal_stats_display"
 	"angles" "0 45 0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"model" "models/props/round_elevator_body.mdl"
-	"modelscale" "1.0"
 	"parentname" "elevator4_train"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"skin" "0"
-	"solid" "6"
 	"targetname" "elevator4_model"
 	"origin" "3510 -1.14441e-005 529"
 	editor
@@ -77915,19 +77905,9 @@ entity
 entity
 {
 	"id" "89000"
-	"classname" "prop_dynamic"
+	"classname" "prop_portal_stats_display"
 	"angles" "0 45 0"
-	"fademindist" "-1"
-	"fadescale" "1"
-	"MaxAnimTime" "10"
-	"MinAnimTime" "5"
-	"model" "models/props/round_elevator_body.mdl"
-	"modelscale" "1.0"
 	"parentname" "elevator3_train"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"skin" "0"
-	"solid" "6"
 	"targetname" "elevator3_model"
 	"origin" "3510 512 529"
 	editor
@@ -88959,6 +88939,7 @@ entity
 	"MinAnimTime" "5"
 	"model" "models/props/combine_ball_catcher.mdl"
 	"modelscale" "1.0"
+	"pingicon" "7"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
 	"skin" "0"
@@ -93198,6 +93179,7 @@ entity
 	"MinAnimTime" "5"
 	"model" "models/props/combine_ball_launcher.mdl"
 	"modelscale" "1.0"
+	"pingicon" "6"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
 	"skin" "0"
@@ -106249,40 +106231,6 @@ entity
 }
 entity
 {
-	"id" "114901"
-	"classname" "math_counter"
-	"max" "2"
-	"targetname" "elevator3-4_counter"
-	connections
-	{
-		"OnHitMax" "elevator4_train,StartForward,,5,-1"
-		"OnHitMax" "elevator4_start,PlaySound,,5,-1"
-		"OnHitMax" "elevator4_shake,StartShake,,5,-1"
-		"OnHitMax" "elevator4_lights,TurnOn,,8,-1"
-		"OnHitMax" "elevator4_doors,EnableCollision,,0,-1"
-		"OnHitMax" "elevator4_doors,SetAnimation,close,0,-1"
-		"OnHitMax" "elevator4_block,Enable,,0,-1"
-		"OnHitMax" "elevator3_train,StartForward,,5,-1"
-		"OnHitMax" "elevator3_start,PlaySound,,5,-1"
-		"OnHitMax" "elevator3_shake,StartShake,,5,-1"
-		"OnHitMax" "elevator3_lights,TurnOn,,8,-1"
-		"OnHitMax" "elevator3_doors,EnableCollision,,0,-1"
-		"OnHitMax" "elevator3_doors,SetAnimation,close,0,-1"
-		"OnHitMax" "elevator3_block,Enable,,0,-1"
-		"OnHitMax" "elevator3_trigger,Disable,,0,-1"
-		"OnHitMax" "elevator4_trigger,Disable,,0,-1"
-	}
-	"origin" "3192 256 520"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[2000 1500]"
-	}
-}
-entity
-{
 	"id" "114871"
 	"classname" "trigger_once"
 	"origin" "2824 256 576"
@@ -111639,6 +111587,75 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "226016"
+	"classname" "env_cubemap"
+	"sides" ""
+	"origin" "1280 128 64"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "228129"
+	"classname" "math_counter"
+	"max" "2"
+	"targetname" "elevator3-4_counter"
+	connections
+	{
+		"OnHitMax" "elevator4_train,StartForward,,5,-1"
+		"OnHitMax" "elevator4_start,PlaySound,,5,-1"
+		"OnHitMax" "elevator4_shake,StartShake,,5,-1"
+		"OnHitMax" "elevator4_lights,TurnOn,,8,-1"
+		"OnHitMax" "elevator4_doors,EnableCollision,,0,-1"
+		"OnHitMax" "elevator4_doors,SetAnimation,close,0,-1"
+		"OnHitMax" "elevator4_block,Enable,,0,-1"
+		"OnHitMax" "elevator3_train,StartForward,,5,-1"
+		"OnHitMax" "elevator3_start,PlaySound,,5,-1"
+		"OnHitMax" "elevator3_shake,StartShake,,5,-1"
+		"OnHitMax" "elevator3_lights,TurnOn,,8,-1"
+		"OnHitMax" "elevator3_doors,EnableCollision,,0,-1"
+		"OnHitMax" "elevator3_doors,SetAnimation,close,0,-1"
+		"OnHitMax" "elevator3_block,Enable,,0,-1"
+		"OnHitMax" "elevator3_trigger,Disable,,0,-1"
+		"OnHitMax" "elevator4_trigger,Disable,,0,-1"
+		"OnHitMax" "elevator3_model,Enable,,1,-1"
+		"OnHitMax" "elevator3_model,UpdateStats,,0,-1"
+		"OnHitMax" "elevator4_model,Enable,,1,-1"
+		"OnHitMax" "elevator4_model,UpdateStats,,0,-1"
+		"OnHitMax" "bonus,Unlock,,0,-1"
+	}
+	"origin" "3184 256 520"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 1500]"
+	}
+}
+entity
+{
+	"id" "228131"
+	"classname" "point_bonusmaps_accessor"
+	"filename" "scripts/2player_challenges/2player_challenges.bns"
+	"mapname" "#Bonus_Map_TC00Challenges"
+	"targetname" "bonus"
+	"origin" "3128 272 528"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 cameras

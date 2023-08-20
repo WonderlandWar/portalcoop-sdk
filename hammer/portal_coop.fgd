@@ -15,7 +15,7 @@
 ///=============================================================================
 
 @PointClass base(Targetname) = point_neurotoxin :
-	"Point Neurotoxin"
+	"Has a timer which gets displayed on neurotoxin countdown screens and deals damage to players when time runs out."
 [	
 	NeurotoxinTime(float) : "Neurotoxin Time" : "" : "How long the neurotoxin will last in seconds."
 	NeurotoxinMaxTimeLeft(float) : "Max NeurotoxinTime Left" : "" : "Set the maximum amount of the ticking timer"
@@ -40,6 +40,21 @@
 	output OnResume( void ) : "Fired the timer is resume"
 	output OnTimerEnded( void ) : "Fired when the time is hits 0"
 ]
+
+@PointClass base(Pingable) = point_ping_linker :	"Pings both entities if one of these entities are pinged"
+[	
+	LinkedEntity1(target_destination) : "Linked Entity 1" : "" : "First linked entity to ping"
+	LinkedEntity2(target_destination) : "Linked Entity 2" : "" : "Second linked entity to ping"
+	LinkedEntity3(target_destination) : "Linked Entity 3" : "" : "Third linked entity to ping"
+	LinkedEntity4(target_destination) : "Linked Entity 4" : "" : "Fourth linked entity to ping"
+	LinkedEntity5(target_destination) : "Linked Entity 5" : "" : "Fifth linked entity to ping"
+	LinkedEntity6(target_destination) : "Linked Entity 6" : "" : "Sixth linked entity to ping"
+	LinkedEntity7(target_destination) : "Linked Entity 7" : "" : "Seventh linked entity to ping"
+	LinkedEntity8(target_destination) : "Linked Entity 8" : "" : "Eighth linked entity to ping"
+	LinkedEntity9(target_destination) : "Linked Entity 9" : "" : "Ninth linked entity to ping"
+	LinkedEntity10(target_destination) : "Linked Entity 10" : "" : "Tenth linked entity to ping"
+]
+
 
 @SolidClass base(Targetname, Parentname) = func_portal_detector : "A region that fires an output if a portal is placed in it"
 [	
@@ -170,7 +185,8 @@
 	// Outputs
 	output OnDissolve(void) : "Fired whenever an entity is dissolved."
 	output OnFizzle(void) : "Fired whenever an portals are fizzled."
-	output OnDissolveBox(void) : "This cleanser disolved an entity with targetname=Box."
+	output OnDissolveBox(void) : "This cleanser disolved an entity with targetname=box."
+	output OnDissolveSphere(void) : "This cleanser disolved an entity with targetname=sphere."
 ]
 
 @SolidClass base(Targetname, Parentname, EnableDisable ) = func_portal_orientation : 
@@ -384,11 +400,15 @@
 
 	input UpdateStats(void) : "Updates the stats to the player's current level stats"
 	input ResetPlayerStats(void) : "Resets the curret level stats of the player"
+	input TestChallengeMode(void) : "Fires the IfIsChallengeMode if challenge mode is enabled, but fires IfIsNotChallengeMode otherwise."
 
 	output OnMetPortalObjective(void)  : "Fired when enabled and player met the number of portal placements."
 	output OnMetStepsObjective(void)  : "Fired when enabled and player met the number of foot steps."
 	output OnMetSecondsObjective(void)  : "Fired when enabled and player met the number of seconds."
 	output OnFailedAllObjectives(void)  : "Fired when enabled and player met no objectives."
+	
+	output IfIsChallengeMode(void)  : "Fires if the TestChallengeMode input was called and challenge mode is enabled."
+	output IfIsNotChallengeMode(void)  : "Fires if the TestChallengeMode input was called and challenge mode is disabled."
 ]
 
 @PointClass base(Targetname, Angles, Parentname) studio("models/editor/axis_helper_thick.mdl") = vgui_neurotoxin_countdown : "Neurotoxin Countdown"

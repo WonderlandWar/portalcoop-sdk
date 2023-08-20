@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "442"
+	"mapversion" "452"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "442"
+	"mapversion" "452"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -15419,8 +15419,8 @@ world
 			"id" "10961"
 			"plane" "(-2468 64 256) (-2468 76 256) (-2468 76 140)"
 			"material" "METAL/METALWALL_BTS_006B_GRADIENT"
-			"uaxis" "[0 1 0 -208] 0.25"
-			"vaxis" "[0 0 -1 256] 0.25"
+			"uaxis" "[0 0 -1 48] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -66963,7 +66963,6 @@ entity
 		"OnTrigger" "center_monitors,Kill,,0,-1"
 		"OnTrigger" "gladosroom_center_rope_*,Kill,,0,-1"
 		"OnTrigger" "monitor_liberation_explotion,Explode,,0,-1"
-		"OnTrigger" "unlockbonusmaps*,Unlock,,0,-1"
 		"OnTrigger" "unlockbonusmaps,Save,,1.5,-1"
 		"OnTrigger" "glados_balcony,Kill,,0,-1"
 		"OnTrigger" "particle_nerve_gas2,Stop,,10,-1"
@@ -78007,118 +78006,6 @@ entity
 }
 entity
 {
-	"id" "2480"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/advanced_chambers"
-	"mapname" "#Bonus_Map_AdvancedChambers"
-	"targetname" "unlockbonusmaps"
-	"origin" "-3322.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "2482"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/challenges/challenges.bns"
-	"mapname" "#Bonus_Map_TC14Challenges"
-	"targetname" "unlockbonusmaps1"
-	"origin" "-3290.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "2484"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/challenges/challenges.bns"
-	"mapname" "#Bonus_Map_TC13Challenges"
-	"targetname" "unlockbonusmaps2"
-	"origin" "-3258.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "2486"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/challenges/challenges.bns"
-	"mapname" "#Bonus_Map_TC15Challenges"
-	"targetname" "unlockbonusmaps3"
-	"origin" "-3226.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "2488"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/challenges/challenges.bns"
-	"mapname" "#Bonus_Map_TC16Challenges"
-	"targetname" "unlockbonusmaps4"
-	"origin" "-3194.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "2490"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/challenges/challenges.bns"
-	"mapname" "#Bonus_Map_TC17Challenges"
-	"targetname" "unlockbonusmaps5"
-	"origin" "-3162.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
-	"id" "2492"
-	"classname" "point_bonusmaps_accessor"
-	"filename" "scripts/challenges/challenges.bns"
-	"mapname" "#Bonus_Map_TC18Challenges"
-	"targetname" "unlockbonusmaps6"
-	"origin" "-3130.39 -1417.29 -23"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
 	"id" "2494"
 	"classname" "prop_dynamic"
 	"angles" "0 135 0"
@@ -85887,7 +85774,7 @@ entity
 	"targetname" "neurotoxin"
 	connections
 	{
-		"OnTimerEnded" "servercmd,Command,changelevel pcoop_7,12,-1"
+		"OnTimerEnded" "servercmd,Command,changelevel p2coop_7,12,-1"
 		"OnTimerEnded" "servercmd,Command,mp_suspend_respawn 1,0,-1"
 		"OnTimerEnded" "servercmd,Command,mp_suspend_respawn 0,12,-1"
 	}
@@ -92606,17 +92493,34 @@ entity
 		}
 		editor
 		{
-			"color" "235 164 0"
+			"color" "220 30 220"
 			"visgroupshown" "1"
 			"visgroupautoshown" "1"
 		}
 	}
 	editor
 	{
-		"color" "235 164 0"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "243939"
+	"classname" "env_global"
+	"globalstate" "pcoop_escape_expressions"
+	"initialstate" "1"
+	"spawnflags" "1"
+	"targetname" "global_escape_expressions"
+	"origin" "-2868 -24 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3000]"
 	}
 }
 cameras
