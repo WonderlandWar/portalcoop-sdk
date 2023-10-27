@@ -44,6 +44,12 @@ $model "Abby" "abby_reference.smd" {
 	%sneer = sneer
 }
 
+$texturegroup skinfamilies
+{
+	{ "chell_body"    "chell_body"   }
+	{ "chell_body"    "chell_body_blue"   }
+	{ "chell_body"    "chell_body_green"   }
+}
 
 $surfaceprop "flesh"
 
@@ -169,7 +175,7 @@ $ikchain "rfoot" "ankle_R" knee 0 0 0
 $ikchain "lfoot" "ankle_L" knee 0 0 0
 
 $sequence "ref" {
-	"abby_anims\ref.smd"
+	"chell_anims\ref.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -180,7 +186,7 @@ $sequence "ref" {
 }
 
 $sequence "ragdoll" {
-	"abby_anims\ragdoll.smd"
+	"chell_anims\ragdoll.smd"
 	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
 	fadeout 0.2

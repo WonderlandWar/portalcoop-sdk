@@ -44,6 +44,12 @@ $model "Mel" "Mel_reference_2.smd" {
 	%sneer = sneer
 }
 
+$texturegroup skinfamilies
+{
+	{ "chell_body_mp01_red"    "chell_body_mp01_red"   }
+	{ "chell_body_mp01_red"    "chell_body_mp01"   }
+	{ "chell_body_mp01_red"    "chell_body_mp01_green"   }
+}
 
 $surfaceprop "flesh"
 
@@ -169,7 +175,7 @@ $ikchain "rfoot" "ankle_R" knee 0 0 0
 $ikchain "lfoot" "ankle_L" knee 0 0 0
 
 $sequence "ref" {
-	"mel_anims\ref.smd"
+	"chell_anims\ref.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -180,7 +186,7 @@ $sequence "ref" {
 }
 
 $sequence "ragdoll" {
-	"mel_anims\ragdoll.smd"
+	"chell_anims\ragdoll.smd"
 	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
 	fadeout 0.2

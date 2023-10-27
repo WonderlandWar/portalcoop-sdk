@@ -38,6 +38,13 @@ $model male_04 "portal_player_reference.smd"{
 }
 //end eye/face data	
 
+$texturegroup skinfamilies
+{
+	{ "portal_player_sheet"    "portal_player_sheet"   }
+	{ "portal_player_sheet"    "portal_player_sheet_skin2"   }
+	{ "portal_player_sheet"    "portal_player_sheet_skin3"   }
+}
+
 $surfaceprop "flesh"
 $bbox -13 -13 0 13 13 72
 $mostlyopaque

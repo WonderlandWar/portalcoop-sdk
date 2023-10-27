@@ -1,28 +1,56 @@
 /----------/
 / p2coop_0 /
 /----------/
+
 Welcome:
 
 Welcome to Portal: Cooperative, the origins of this mod goes back to 2020 for a Portal mod named Portal: Multiplayer. The first 3 maps in the 2 player map set originated from my custom Portal: Multiplayer maps. I realized later on that creating multiplayer maps for this mod was too difficult because of how buggy it is so I let these maps gather in the dust for years only updating them occasionally. In Portal's gamepad UI update, the bug that crashed the game when you were close to a Portal was fixed, allowing me to make maps for a little less buggy version of Portal: Multiplayer. Later on, I realized that creating a Portal Cooperative mod was necessary because midigating the bugs wasn't satisfactory as fixing the bugs was a much better solution and it let me add features that wouldn't be possible in a standalone map pack.
 
-Energy Ball Training:
+Introduction:
 
-This first room needed to be simple for a few reasons, Portal 1 Coop is new and players need to be refreshed even if they've already played Portal 2 coop and this test chamber also trains players on how they can use the energy ball together, since the official Portal 2 levels didn't have them.
+This room was setup so that players can see each other from their own relaxation vault. The portals that the players exit through are facing each other to immediately ensure that both of the players' goal is to meet each other.
 
 /----------/
 / p2coop_1 /
 /----------/
 
+Pacing:
+
+The first 2 puzzles start from 1 set of portals only to 2 sets of portals. This helps the pacing by introducing another portal set's existence in a puzzle environment so that when players get the portalgun in the 3rd level, players aren't completely overwhelmed by another portal set's existence in a more complicated puzzle.
+
+/----------/
+/ p2coop_2 /
+/----------/
+Portalgun Puzzle:
+
+This puzzle was difficult to create as most rotating portalgun puzzles are. The grates where the buttons were located that surrounded the flooring originally didn't exist, which prompted some playtesters to solve the puzzle by having 1 player stay at the cleansers with the box while the other player quickly rushed to press both buttons in time. This was an incorrect solution that the grates now prevent.
+
+Fling Area Purpose:
+
+This fling area was originally in the next map due to the fact that it used to be the first map. It's now used as a simple puzzle after players acquire the portalgun, but its main purpose is to ensure that both players have a portalgun when they reach the exit.
+
+/----------/
+/ p2coop_3 /
+/----------/
+
+Energy Ball Training:
+
+In earlier versions of Portal: Cooperative, this was the first test chamber because of how simple it is. It's now used to introduce energy balls for the mod in a way that trains players on using the energy ball together.
+
+/----------/
+/ p2coop_4 /
+/----------/
+
 Original Entrances:
 
-In the original versions of each test chamber entrance, there would be a button here that would activate a pedestal right in front of it that delivers a portalgun, this was because the Portal: Multiplayer mod only spawned you with the blue portalgun, this was a slow process however. When this map pack was originally moved to Portal, the portalgun spawned using map logic in a similar way you spawn with weapons in Half-Life 2 while also using a timer to constantly make your portalgun able to shoot both portals. In Portal: Cooperative, the portalgun spawn is now controlled by a console command.
+In the original versions of each test chamber entrance, there would be a button here that would activate a pedestal right in front of it that delivers a portalgun, this was because the Portal: Multiplayer mod only spawned you with the blue portalgun, this was a slow process however. When this map pack was originally moved to Portal, the portalgun spawned using map logic in a similar way you spawn with weapons in Half-Life 2 while also using a timer to constantly make your portalgun able to shoot both portals. In Portal: Cooperative, the portalgun spawn is now controlled by the spawnpoints themselves which are easy to use for custom map makers.
 
 Old Puzzle:
 
 In the original version of this test chamber, the launcher was on this side of the test chamber, the glass dividing the test chamber didn't exist and there was a button somewhere under this node that opened doors which blocked the energy ball from the portal surface for your partner to use. This was a very boring and underwhelming puzzle because it only consisted of doing an infinite fling and delivering the ball to your partner while you stand on a button. The difficulty of this puzzle also didn't increase from the previous puzzle very much. With this new version, having a player direct the ball to you, and you directing it back at them proved to be more interesting and is conceptually harder than redirecting the ball only once.
 
 /----------/
-/ p2coop_2 /
+/ p2coop_5 /
 /----------/
 
 Old Layout 1:
@@ -41,7 +69,7 @@ Ping Marker:
 The Ping Marker or Ping Tool is based off of the old style pinging in Portal 2. When you are not looking at an pingable object, it creates a crosshair, but if it pingable, it will glow. Originally these doors weren't pingable because the door models don't have a collision model, while the actual collision of the doors is from the door entity itself. So how do we make the door model glow? When you ping the door entity, the ping marker scans through every pingable object in the entity index and checks if the pingable object is parented to the door. If the pingable object is parented to the door, it will glow. This also includes if the pingable object is parented to something, if the object is parented to something, the ping marker scans through every pingable object in the entity index and sees if that object is parented and matches the pingable object's parent you pinged, if all that checks out, it will glow.
 
 /----------/
-/ p2coop_3 /
+/ p2coop_6 /
 /----------/
 
 Old Goo:
@@ -49,7 +77,7 @@ Old Goo:
 This section went through many iterations before we settled on this. The first iteration didn't have the cleanser and the left platform moved up and down. There were a few problems with this iteration, 1 player could get the box and get both boxes by using the first box and the platform moving up and down proved to be annoying. The next iteration included the cleanser with the timed button, this solved players being able to singlehandedly make it through to get the box. The moving platform was still kept however and it proved to be more annoying than anything else, so the platform is now stationary.
 
 /----------/
-/ p2coop_4 /
+/ p2coop_7 /
 /----------/
 
 Last Test:
@@ -73,7 +101,7 @@ Escape Puzzles:
 The escape puzzles in Portal: Cooperative needed to require both players to solve the puzzles together, otherwise it wouldn't be fun for the player that did nothing while the other person solves the puzzle and cooperation was the main focus of this mod. The puzzles weren't easy to create because Behind The Scenes in Portal dont't have testing elements that test chambers do so the escape puzzles mainly required the 1st player to save portals 2nd player has to direct the 1st player somewhere else.
 
 /----------/
-/ p2coop_5 /
+/ p2coop_8 /
 /----------/
 
 Escape Filler:
@@ -86,7 +114,7 @@ Most escape puzzles were created separately and then stitched together. This was
 
 
 /----------/
-/ p2coop_6 /
+/ p2coop_9 /
 /----------/
 
 Respawning:
@@ -97,9 +125,13 @@ Rocket Turret:
 
 The rocket turrets in Portal only have their enemy set to the first player. In singleplayer, this is works fine, but in multiplayer, it means that only 1 player will be targetted. So how do we fix this? In Half-Life 2, NPCs have a system to find their "bestenemy", which usually just means the closest enemy and the NPC must be able to know that the enemy exists. We moved this bestenemy system to the rocket turret and now it can target all players and other NPCs automatically. It originally had a proper viewcone, but this was inconsistent with how the rocket turret functions in Portal, so this was undone.
 
+Rocket Turret Puzzle:
+
+This room was very difficult to create to achieve proper player guidance. If you've played earlier versions of the mod, you may have had difficulty realizing that the solution was to blow up the observation room window with the rocket. The new changes include cameras that mark portal placement, a new glass window that players must blow up before entering the other section of the test chamber, and a new location for the observation room window. The old observation room placement was just off to the corner, making it seem insignificant. The purpose of the new glass is to make players immediately believe that this is a rocket redirection puzzle and that there's more upcoming ones, preparing them for the observation window glass.
+
 
 /----------/
-/ p2coop_7 /
+/ p2coop_10 /
 /----------/
 
 Bossfight:

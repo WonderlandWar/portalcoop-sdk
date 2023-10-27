@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "353"
+	"mapversion" "355"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "353"
+	"mapversion" "355"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -62395,9 +62395,12 @@ entity
 entity
 {
 	"id" "23416"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "2016 -288 128"
 	editor
 	{
@@ -62411,9 +62414,12 @@ entity
 entity
 {
 	"id" "23418"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1824 -288 128"
 	editor
 	{
@@ -62427,9 +62433,12 @@ entity
 entity
 {
 	"id" "23420"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1888 -288 128"
 	editor
 	{
@@ -62443,9 +62452,12 @@ entity
 entity
 {
 	"id" "23422"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1952 -288 128"
 	editor
 	{
@@ -62459,9 +62471,12 @@ entity
 entity
 {
 	"id" "23428"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "2016 -352 128"
 	editor
 	{
@@ -62475,9 +62490,12 @@ entity
 entity
 {
 	"id" "23430"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1824 -352 128"
 	editor
 	{
@@ -62491,9 +62509,12 @@ entity
 entity
 {
 	"id" "23432"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1888 -352 128"
 	editor
 	{
@@ -62507,9 +62528,12 @@ entity
 entity
 {
 	"id" "23434"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1952 -352 128"
 	editor
 	{
@@ -62523,9 +62547,12 @@ entity
 entity
 {
 	"id" "23445"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1760 -288 128"
 	editor
 	{
@@ -62539,9 +62566,12 @@ entity
 entity
 {
 	"id" "23447"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1568 -288 128"
 	editor
 	{
@@ -62555,9 +62585,12 @@ entity
 entity
 {
 	"id" "23449"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1632 -288 128"
 	editor
 	{
@@ -62571,9 +62604,12 @@ entity
 entity
 {
 	"id" "23451"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1696 -288 128"
 	editor
 	{
@@ -62587,9 +62623,12 @@ entity
 entity
 {
 	"id" "23457"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1760 -352 128"
 	editor
 	{
@@ -62603,9 +62642,12 @@ entity
 entity
 {
 	"id" "23459"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1568 -352 128"
 	editor
 	{
@@ -62619,9 +62661,12 @@ entity
 entity
 {
 	"id" "23461"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1632 -352 128"
 	editor
 	{
@@ -62635,9 +62680,12 @@ entity
 entity
 {
 	"id" "23463"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "1696 -352 128"
 	editor
 	{

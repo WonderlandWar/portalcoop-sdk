@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "278"
+	"mapversion" "282"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "278"
+	"mapversion" "282"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -153505,19 +153505,6 @@ entity
 }
 entity
 {
-	"id" "31091"
-	"classname" "info_player_deathmatch"
-	"origin" "768 -336 24"
-	editor
-	{
-		"color" "0 255 0"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
 	"id" "31087"
 	"classname" "env_cubemap"
 	"origin" "768 -304 64"
@@ -153532,9 +153519,12 @@ entity
 entity
 {
 	"id" "30743"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 90 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "768 -336 24"
 	editor
 	{
@@ -155217,23 +155207,13 @@ entity
 }
 entity
 {
-	"id" "1022"
-	"classname" "info_player_deathmatch"
-	"origin" "240 576 24"
-	editor
-	{
-		"color" "0 255 0"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
-	}
-}
-entity
-{
 	"id" "1039"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 0 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "240 64 24"
 	editor
 	{
@@ -155326,19 +155306,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 4500]"
-	}
-}
-entity
-{
-	"id" "1024"
-	"classname" "info_player_deathmatch"
-	"origin" "240 64 24"
-	editor
-	{
-		"color" "0 255 0"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 0]"
 	}
 }
 entity
@@ -158699,9 +158666,12 @@ entity
 entity
 {
 	"id" "1037"
-	"classname" "info_player_start"
+	"classname" "info_player_portalcoop"
 	"angles" "0 0 0"
+	"PortalgunType" "3"
 	"spawnflags" "0"
+	"SpawnWithPortalgun" "1"
+	"ValidPlayerIndex" "0"
 	"origin" "240 576 24"
 	editor
 	{
