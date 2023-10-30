@@ -855,6 +855,7 @@
 	output OnEndTouch(void) : "Fired when an entity stops touching this trigger. Only entities that passed this trigger's filters will cause this output to fire."
 	output OnEndTouchAll(void) : "Fires when an entity stops touching this trigger, and no other entities are touching it. Only entities that passed this trigger's filters are considered."
 	output OnAllPlayersTouching(void) : "Fires when all players are touching this trigger."
+	output OnMaxPlayersTouching(void) : "Fires when the number players touching this trigger is equal to the server's maxplayers."
 ]
 
 @BaseClass = worldbase
@@ -6054,6 +6055,18 @@
 	[
 		2: "Disable Touch" : 0
 		4: "To Previous Chapter" : 0
+	]
+	
+	AllPlayersMustBeTouching(choices) : "Test for all players" : 0 : "" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	MaxPlayersMustBeTouching(choices) : "Test for max players" : 0 : "" =
+	[
+		0 : "No"
+		1 : "Yes"
 	]
 	
 	// Inputs

@@ -81,6 +81,47 @@
 	]
 ]
 
+
+@PointClass base(PlayerClass, Angles, Parentname, Targetname) studio("models/player/chell.mdl") = info_player_portalcoop : "Same as info_player_start, but made for portalcoop"
+[
+	spawnflags(flags) =
+	[
+		1: "Master (Has priority if multiple info_player_playercoops exist)" : 0
+	]
+	
+	
+	SpawnWithPortalgun(choices)			: "Spawn With Portalgun" : 1 : "Should we spawn the player with the portalgun?"	=
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	
+	PortalgunType(choices)			: "Portalgun Upgrade Type" : 3 : "Which portals are we allowed to shoot?"	=
+	[
+		0 : "None (Can't shoot portals)"
+		1 : "Primary Only"
+		2 : "Secondary Only"
+		3 : "Both"
+	]	
+	
+	ValidPlayerIndex(integer) : "Player to spawn (0 means any player)" : 0
+	
+	
+	input EnablePortalgunSpawn(void)		: "Equip the players with the portalgun on spawn."
+	input DisablePortalgunSpawn(void)		: "Don't equip the players with the portalgun on spawn."
+	input SetPortalgunType(integer)		: "Sets the portalgun type to spawn with"
+	input SetPlayer(integer)		: "Sets what player can spawn here"
+
+	output OnPlayerSpawned(void)		: "Fired when a player spawns on this spawnpoint"
+	
+]
+
+@FilterClass base(BaseFilter) iconsprite("editor/filter_class.vmt") = filter_activator_playerindex :
+	"A filter that filters by the class name of the activator."
+[
+	PlayerIndex(integer) : "Filter Player Index" : : "Filter by the player's index"
+]
+
 ///=============================================================================
 ///=============================================================================
 //
@@ -276,6 +317,8 @@
 	input NewLocation(string) : "Sets this portals location and angles. This expects 6 floats with space delimiters, the format is 'x y z pitch yaw roll'"
 
 	output OnPlacedSuccessfully(void) : "When a portal is placed without failure, this output is fired."
+	output OnFizzled(void) : "Fired when the portal is fizzled in any way."
+	output OnStolen(void) : "Fired when the this portal gets stolen."
 ]
 
 @PointClass base(Weapon,Targetname, Parentname) studio("models/weapons/w_portalgun.mdl") = weapon_portalgun : "Portalgun"
@@ -295,6 +338,8 @@
 		0 : "No"
 		1 : "Yes"
 	]
+	
+	ValidPlayer(integer) : "Allow Pickup For Player # (0 for all players)" : 0 : "Only allow player pickup if they are this player number, which is set depending on the order of when they joined the server. (The first player to join is #1, second player to join is #2, etc...)"
 	
 	PortalLinkageGroupID(integer) : "Linkage Group ID" : 0 : ""
 

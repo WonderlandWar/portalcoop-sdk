@@ -3547,11 +3547,20 @@
 		2 : "Deny player pickup (reserve for NPC)" : 0
 		4 : "Not puntable by Gravity Gun" : 0
 	]
+	
+	AllowPlayerPickup(choices) : "Allow Player Pickup" : 1 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
 
 	output OnPlayerUse(void) : "Fires when the player +uses this weapon"
 	output OnPlayerPickup(void) : "Fires when the player picks up this weapon"
 	output OnNPCPickup(void) : "Fires when an NPC picks up this weapon"
 	output OnCacheInteraction(void) : "Fires when the player 'proves' they've found this weapon. Fires on: Player Touch, +USE pickup, Physcannon pickup, Physcannon punt."
+	
+	input EnablePlayerPickup(void) : "Allows players to pickup this weapon"
+	input DisablePlayerPickup(void) : "Disallows players to pickup this weapon"
 
 	fademindist(float) : "Start Fade Dist/Pixels" : -1 : "Distance at which the prop starts to fade (<0 = use fademaxdist). If 'Screen Space Fade' is selected, this represents the number of pixels wide covered by the prop when it starts to fade."
 	fademaxdist(float) : "End Fade Dist/Pixels" : 0 : "Maximum distance at which the prop is visible (0 = don't fade out). If 'Screen Space Fade' is selected, this represents the *minimum* number of pixels wide covered by the prop when it fades."
