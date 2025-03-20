@@ -6,6 +6,62 @@
 
 @include "halflife2_pcoop.fgd"
 
+
+///=============================================================================
+///=============================================================================
+//
+// Rexaura Entities
+//
+///=============================================================================
+///=============================================================================
+
+@PointClass base(Targetname, Angles, Parentname, Global) studio( "models/props/metal_box.mdl" ) = prop_box : "Box"
+[
+	input Dissolve(void) : "Dissolves the box as if it touched a cleanser"
+	
+	output OnDissolved(void)  : "Fired when the box is dissolved by an energy ball or a fizzler."
+]
+
+@SolidClass base(Targetname, Parentname) = trigger_box_reflector : "A nontraditional trigger that snatches prop_box entities"
+[
+	AttachToEntity(target_destination) 		: "Entity to attach box to."
+	Temporary(choices)						: "Temporary" : 0 : "Detaches the box after how long sv_trigger_box_reflector_temporary_time in seconds"	=
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+		
+	BeamSetName1(target_destination) 		: "Beam Set 1" : "" : "The first beam set for temporary boxes, the beams will decrease in brightness while time runs out."
+	BeamSetName2(target_destination) 		: "Beam Set 2" : "" : "The second beam set for temporary boxes, the beams will decrease in brightness while time runs out."
+	BeamSetName3(target_destination) 		: "Beam Set 3" : "" : "The third beam set for temporary boxes, the beams will decrease in brightness while time runs out."
+	BeamSetName4(target_destination) 		: "Beam Set 4" : "" : "The fourth beam set for temporary boxes, the beams will decrease in brightness while time runs out."
+	BeamSetName5(target_destination) 		: "Beam Set 5" : "" : "The fifth beam set for temporary boxes, the beams will decrease in brightness while time runs out."
+
+	//Outputs
+	output OnAttached(void)				: "Fired when a box gets attached to this trigger."
+	output OnDetached(void)				: "Fired when a box gets detached from this trigger."
+	output OnEnergyBallHit(void)		: "Fired when the attached box gets hit by an energy ball."
+]
+
+@SolidClass base(Targetname, Parentname) = trigger_ball_destroyer : "A nonconventional trigger that dissolves entities, explodes energy balls and hurts players"
+[
+	EnergyBallsOnly(choices)				: "Only explode energy balls" : 0 : "Doesn't dissolve or hurt the player, only explodes energy balls"	=
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	//Outputs
+	output OnDissolve(void)			: "Fired when a box gets attached to this trigger."
+	output OnDissolveBox(void)		: "Fired when a box gets detached from this trigger."
+	output OnExplodeBall(void)		: "Fired when the attached box gets hit by an energy ball."
+]
+
+@SolidClass base(Targetname, EnableDisable) = func_box_reflector_shield : "A compononent to trigger_box_reflector, energy balls that hit this shield will dissolve the box" 
+[
+	BoxReflector(target_destination) : "Box Reflector" : : "The trigger_box_reflector this entity is associated with"
+]
+
 ///=============================================================================
 ///=============================================================================
 //
@@ -55,7 +111,6 @@
 	LinkedEntity10(target_destination) : "Linked Entity 10" : "" : "Tenth linked entity to ping"
 ]
 
-
 @SolidClass base(Targetname, Parentname) = func_portal_detector : "A region that fires an output if a portal is placed in it"
 [	
 	//Inputs
@@ -84,12 +139,6 @@
 
 @PointClass base(PlayerClass, Angles, Parentname, Targetname) studio("models/player/chell.mdl") = info_player_portalcoop : "Same as info_player_start, but made for portalcoop"
 [
-	spawnflags(flags) =
-	[
-		1: "Master (Has priority if multiple info_player_playercoops exist)" : 0
-	]
-	
-	
 	SpawnWithPortalgun(choices)			: "Spawn With Portalgun" : 1 : "Should we spawn the player with the portalgun?"	=
 	[
 		0 : "No"
@@ -113,7 +162,6 @@
 	input SetPlayer(integer)		: "Sets what player can spawn here"
 
 	output OnPlayerSpawned(void)		: "Fired when a player spawns on this spawnpoint"
-	
 ]
 
 @FilterClass base(BaseFilter) iconsprite("editor/filter_class.vmt") = filter_activator_playerindex :
@@ -137,13 +185,36 @@
 //
 ///=============================================================================
 
+@PointClass base(Targetname, Parentname, Angles, EnableDisable) sphere(radius) studio("models/editor/axis_helper_thick.mdl") = info_placement_helper : "Placement helper"
+[
+	radius(float) : "Radius" : 16 : "Radius in which to influence placement.,"
+	proxy_name(target_destination) : "Proxy Entity Name" : : "Name of the entity we want to use for our real placement position."
+	attach_target_name(string) : "Attach Entity Name" : : "Name of the entity we want force our attachment to. Used to combine objects."
+
+	snap_to_helper_angles(choices) : "Use helper's angles" : 0 : "Placed objects will snap to the angles of the placement helper." =
+	[
+		0 : "Don't use angles"
+		1 : "Use angles"
+	]
+
+	force_placement(choices) : "Force Placement" : 0 : "Avoids placement rules when placing at this helper." =
+	[
+		0 : "Don't force"
+		1 : "Force"
+	]
+
+	output OnObjectPlaced(void) : "An object has been successfully placed using us as a guide."
+	output OnObjectPlacedSize(integer) : "When an object is successfully placed, this sends the scale level as an out value"
+]
+
 @PointClass base(CombineBallSpawners, Parentname, Targetname) = point_energy_ball_launcher :
 	"Launches energy balls."
 [
 	BallLifetime(float) 	: "Ball Lifetime" : 12 : "The time in seconds the ball will live before self-destructing. A negative value will give infinite life."
 	MinLifeAfterPortal(float) : "Min life after portal transition" : 6 : "When energy balls created by this launcher pass through a portal and their life is refreshed to be this number at minimum."
 	// Inputs
-	input LaunchBall(void) 	: "Launch a ball from the spawner."
+	input LaunchBall(void) 			: "Launch a ball from the spawner."
+	input ExplodeAllBalls(void) 	: "Explode every ball this launcher has created."
 
 	// Outputs
 	output OnPostSpawnBall(void) : "Fired after the ball has spawned."
@@ -417,13 +488,11 @@
 	output OnDeploy(void) : "Camera is becoming active and dangerous."
 	output OnRetire(void) : "Camera is becoming inactive and harmless."
 	
-	PlayDestroyedScenes(choices) : "Play Camera Destroyed Scenes" : 1 : "When this camera breaks, should it make GLaDOS speak?"	=
+	SuppressDestroyedScenes(choices) : "Play Camera Destroyed Scenes" : 0 : "When this camera breaks, should it not play the destroyed scenes?"	=
 	[
 		0 : "No"
 		1 : "Yes"
 	]
-	
-	IsPCoopCamera(integer)	readonly	: "Is PortalCoop Camera (Don't Change)"      : 1  : "(Don't change). Was this camera created using this FGD?"
 ]
 
 @PointClass base(Targetname, Angles, Studiomodel) studio( "models/props/telescopic_arm.mdl" ) = prop_telescopic_arm : "Telescopic Arm"
@@ -463,6 +532,29 @@
 
 	input Enable(void) : "Make slideshow visible."
 	input Disable(void) : "Make slideshow invisible."
+]
+
+@PointClass base(Targetname, Angles, Parentname) studio("models/props/radio_reference.mdl") = prop_radio : "Radio Prop"
+[
+	signalname(target_destination) : "Signal Entity Name" : : "The signal that this radio needs to receive."
+	
+	// outputs
+	output OnSignalReceived(void) : "Fired when the radio has received a signal."
+]
+
+@PointClass base(Targetname, Parentname) sphere(outerradius) sphere(innerradius) size(16 16 16) = info_radio_signal : 
+	"The signal the radio needs to find for it to activate"
+[
+	soundname(sound) : "Found Sound" : "UpdateItem.Dinosaur01" : "Sound played when the radio is found in its location."
+
+	signalid(integer) : "Radio ID" : 0 : "The ID this radio uses for scripts/radios.txt"
+	
+	innerradius(float) : "Inner Radius" : 64 : "If the radio is in this sphere, it will activate the radio."
+	outerradius(float) : "Outer Radius" : 200 : "If the radio is in this sphere, static noises begin playing and the closer the radio is, the louder its Found Sound is"
+	
+	// outputs
+	output OnRadioEntered(void) : "Fired when a radio has entered the outer radius."
+	output OnRadioFullyEntered(void) : "Fired when a radio has entered the inner radius"
 ]
 
 
@@ -511,6 +603,25 @@
 	output OnCreditsDone(void)  : "Fired when the credits having finished rolling."
 ]
 
+///=============================================================================
+//
+// Gamerules
+//
+///=============================================================================
+
+@PointClass base(Targetname) size(-8 -8 -8, 8 8 8) = portal_gamerules : 
+	"Access global features."
+[
+	// Inputs
+	input SuspendRespawning(bool) : "Do not allow players to respawn."
+	input RespawnAllPlayers(void) : "Respawn all players in the server, will not work if suspended respawning is enabled."
+	input ResetDetachedCameras(void) : "Reset the camera attachment count for GLaDOS dialogue."
+	input ResetDetachedCameras(void) : "Reset the camera attachment count for GLaDOS dialogue."
+	//input DisableGamePause(bool) : "Disable/Enable the system that determines when the game should pause."
+	
+	// Outputs
+	output OnPlayerConnected(void)  : "Fired when a player connects to the server."
+]
 
 
 ///=============================================================================
@@ -525,4 +636,3 @@
 									" If empty, the info_lighting_relative's origin will" +
 									" be used."
 ]
-

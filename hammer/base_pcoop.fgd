@@ -48,7 +48,7 @@
 	]
 ]
 
-@BaseClass = Studiomodel
+@BaseClass base(Pingable) = Studiomodel
 [
 	model(studio) : "World Model"
 	skin(integer) : "Skin" : 0 : "Some models have multiple versions of their textures, called skins. Set this to a number other than 0 to use that skin instead of the default."
@@ -58,26 +58,6 @@
 	[
 		0 : "No"
 		1 : "Yes"
-	]
-	
-	pingicon(choices) : "Ping Icon" : 0 : "Ping Icon to use when pinged at" =
-	[
-		0 : "Default"
-		1 : "Door"
-		2 : "Box"
-		3 : "Sphere"
-		4 : "Floor Button"
-		5 : "Switch"
-		6 : "Energyball Launcher"
-		7 : "Energyball Catcher"
-		
-		8 : "Horizontal Piston"
-		9 : "Vertical Piston"
-		
-		10 : "Portal"
-		11 : "Turret"
-		12 : "GLaDOS Core"		
-		
 	]
 
 	// Inputs
@@ -5377,7 +5357,7 @@
 												 " Numbers smaller than 1 cause the prop to fade out at further distances, and greater than 1 cause it to fade out at closer distances."
 ]
 
-@BaseClass base(Parentname, Global, Angles, Studiomodel, BreakableProp, DXLevelChoice, BaseFadeProp, RenderFields) = prop_dynamic_base
+@BaseClass base(Parentname, Global, Angles, Studiomodel, BreakableProp, DXLevelChoice, BaseFadeProp, RenderFields, Pingable) = prop_dynamic_base
 [
 	solid(choices) : "Collisions" : 6 =
 	[
