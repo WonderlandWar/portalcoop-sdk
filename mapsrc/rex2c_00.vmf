@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8869"
-	"mapversion" "503"
+	"mapversion" "506"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "503"
+	"mapversion" "506"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.4.4 from rex_00_intro"
 	"detailmaterial" "detail/detailsprites"
@@ -65053,27 +65053,6 @@ world
 	}
 	group
 	{
-		"id" "1452480"
-		editor
-		{
-			"color" "202 231 0"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	group
-	{
-		"id" "1452461"
-		editor
-		{
-			"color" "202 231 0"
-			"groupid" "1452480"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	group
-	{
 		"id" "1452509"
 		editor
 		{
@@ -66285,8 +66264,8 @@ entity
 				"v" "160 4160 -840"
 			}
 			"material" "METAL/METALWALL060A"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
+			"uaxis" "[1 0 0 -128] 0.25"
+			"vaxis" "[0 -1 0 256] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -68724,8 +68703,8 @@ entity
 				"v" "-32 4160 -840"
 			}
 			"material" "METAL/METALWALL060A"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
+			"uaxis" "[1 0 0 128] 0.25"
+			"vaxis" "[0 -1 0 256] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -134061,7 +134040,7 @@ entity
 	"angles" "-50 90 0"
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_03"
 	"wait" "10"
@@ -134106,7 +134085,7 @@ entity
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
 	"parentname" "camera_04_door"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_04"
 	"wait" "10"
@@ -134278,7 +134257,7 @@ entity
 	"angles" "-10 -110 0"
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_06"
 	"wait" "10"
@@ -134342,7 +134321,7 @@ entity
 	"angles" "0 0 0"
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_black_p2"
 	"wait" "10"
@@ -134364,7 +134343,7 @@ entity
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
 	"parentname" "camera_01_door"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_01"
 	"wait" "10"
@@ -134537,7 +134516,7 @@ entity
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
 	"parentname" "camera_02_door"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_02"
 	"wait" "10"
@@ -134775,7 +134754,7 @@ entity
 	"angles" "-7 -15 0"
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_ending"
 	"wait" "10"
@@ -378399,7 +378378,7 @@ entity
 	"angles" "0 0 0"
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_black"
 	"wait" "10"
@@ -378743,7 +378722,7 @@ entity
 	"deceleration" "500"
 	"interpolatepositiontoplayer" "0"
 	"parentname" "camera_05_door"
-	"spawnflags" "24"
+	"spawnflags" "28"
 	"speed" "0"
 	"targetname" "camera_05"
 	"wait" "10"
@@ -394965,8 +394944,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-215.662 348.935 166.395]"
-		"look" "[-342.526 145.886 49.6197]"
+		"position" "[170.475 4077.29 -607.486]"
+		"look" "[174.657 4110.41 -343.2]"
 	}
 }
 cordons
