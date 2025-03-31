@@ -616,8 +616,9 @@
 	input SuspendRespawning(bool) : "Do not allow players to respawn."
 	input RespawnAllPlayers(void) : "Respawn all players in the server, will not work if suspended respawning is enabled."
 	input ResetDetachedCameras(void) : "Reset the camera attachment count for GLaDOS dialogue."
-	input ResetDetachedCameras(void) : "Reset the camera attachment count for GLaDOS dialogue."
-	//input DisableGamePause(bool) : "Disable/Enable the system that determines when the game should pause."
+	input DisableGamePause(bool) : "Disable/Enable the system that determines when the game should pause."
+	input DisablePlayerRestore(bool) : "Disable/Enable the player restore system."
+	input PurgePlayerRestoreData(void) : "Deletes the currently existing disconnected player data."
 	
 	// Outputs
 	output OnPlayerConnected(void)  : "Fired when a player connects to the server."
