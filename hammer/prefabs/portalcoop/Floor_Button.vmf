@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9520"
-	"mapversion" "79"
+	"mapversion" "80"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "79"
+	"mapversion" "80"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -559,8 +559,8 @@ entity
 	connections
 	{
 		"OnEndTouchAll" "floor_button&i_trigger_player,Enable,,0,-1"
-		"OnTrigger" "floor_button&i_trigger_player,Disable,,0,-1"
-		"OnTrigger" "floor_button&i_door,Open,,0,-1"
+		"OnStartTouch" "floor_button&i_trigger_player,Disable,,0,-1"
+		"OnStartTouch" "floor_button&i_door,Open,,0,-1"
 		"OnEndTouchAll" "floor_button&i_door,Close,,0,-1"
 	}
 	solid
