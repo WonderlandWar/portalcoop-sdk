@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "8869"
-	"mapversion" "160"
+	"editorbuild" "8870"
+	"mapversion" "164"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,7 +14,7 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "8"
+	"nGridSpacing" "64"
 }
 palette_plus
 {
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "160"
+	"mapversion" "164"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -1922,21 +1922,36 @@ entity
 entity
 {
 	"id" "690"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 0 0"
-	"disableselfshadowing" "0"
-	"disablevertexlighting" "0"
+	"DisableBoneFollowers" "0"
+	"disablereceiveshadows" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
 	"fademindist" "-1"
 	"fadescale" "1"
-	"ignorenormals" "0"
+	"MaxAnimTime" "10"
+	"MinAnimTime" "5"
 	"model" "models/props/box_dropper.mdl"
-	"screenspacefade" "0"
+	"modelscale" "1.0"
+	"PerformanceMode" "0"
+	"pingicon" "0"
+	"pressuredelay" "0"
+	"RandomAnimation" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"renderfx" "0"
+	"rendermode" "0"
+	"SetBodyGroup" "0"
 	"skin" "0"
 	"solid" "6"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "box_dropper&i_model"
 	"origin" "0 0 -100"
 	editor
 	{
-		"color" "255 255 0"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 6000]"
@@ -1950,9 +1965,9 @@ entity
 	"targetname" "box&i"
 	connections
 	{
-		"OnOutOfWorld" "!activator,Kill,,0,-1"
-		"OnOutOfWorld" "logic_drop_box&i,Trigger,,0,1"
-		"OnDissolved" "logic_drop_box&i,Trigger,,0,-1"
+		"OnOutOfWorld" "!activatorKill0-1"
+		"OnOutOfWorld" "logic_drop_box&iTrigger01"
+		"OnDissolved" "logic_drop_box&iTrigger0-1"
 	}
 	"origin" "0 0 400"
 	editor
@@ -2173,12 +2188,12 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnEndTouchAll" "entity_box_maker&i,ForceSpawn,,0,-1"
-		"OnEndTouchAll" "box_dropper&i_model_cover,SetAnimation,close,0,-1"
-		"OnEndTouchAll" "stop_tube_plugging&i,Enable,,0,-1"
-		"OnEndTouchAll" "!self,Disable,,0,-1"
-		"OnEndTouchAll" "stop_tube_plugging&i,Disable,,2,-1"
-		"OnTrigger" "!activator,Wake,,0,-1"
+		"OnEndTouchAll" "entity_box_maker&iForceSpawn0-1"
+		"OnEndTouchAll" "box_dropper&i_model_coverSetAnimationclose0-1"
+		"OnEndTouchAll" "stop_tube_plugging&iEnable0-1"
+		"OnEndTouchAll" "!selfDisable0-1"
+		"OnEndTouchAll" "stop_tube_plugging&iDisable2-1"
+		"OnTrigger" "!activatorWake0-1"
 	}
 	solid
 	{
@@ -2315,10 +2330,10 @@ entity
 	"targetname" "logic_drop_box&i"
 	connections
 	{
-		"OnTrigger" "box_dropper&i_model_cover,SetAnimation,open,0,-1"
-		"OnTrigger" "stop_tube_plugging&i,Disable,,0,-1"
-		"OnTrigger" "trigger_box&i_dropper_clear,Enable,,0,-1"
-		"OnSpawn" "entity_box_maker&i,ForceSpawn,,0,1"
+		"OnTrigger" "box_dropper&i_model_coverSetAnimationopen0-1"
+		"OnTrigger" "stop_tube_plugging&iDisable0-1"
+		"OnTrigger" "trigger_box&i_dropper_clearEnable0-1"
+		"OnSpawn" "entity_box_maker&iForceSpawn01"
 	}
 	"origin" "88 -8 -88"
 	editor
@@ -4236,6 +4251,22 @@ entity
 	editor
 	{
 		"color" "0 180 0"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "2783"
+	"classname" "point_ping_linker"
+	"LinkedEntity1" "box_dropper&i_model"
+	"LinkedEntity2" "box_dropper&i_model_cover"
+	"LinkedEntity3" "stop_tube_plugging&i"
+	"origin" "0 0 -64"
+	editor
+	{
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"

@@ -44,13 +44,6 @@ $model "Abby" "abby_reference.smd" {
 	%sneer = sneer
 }
 
-$texturegroup skinfamilies
-{
-	{ "chell_body"    "chell_body"   }
-	{ "chell_body"    "chell_body_blue"   }
-	{ "chell_body"    "chell_body_green"   }
-}
-
 $surfaceprop "flesh"
 
 $contents "solid"
