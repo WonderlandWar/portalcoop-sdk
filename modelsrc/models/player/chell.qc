@@ -44,12 +44,6 @@ $model "Chell" "Chell_reference_2.smd" {
 	%sneer = sneer
 }
 
-$texturegroup skinfamilies
-{
-	{ "chell_body"    "chell_body"   }
-	{ "chell_body"    "chell_body_blue"   }
-	{ "chell_body"    "chell_body_green"   }
-}
 
 $surfaceprop "flesh"
 

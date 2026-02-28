@@ -4,13 +4,13 @@ $modelname "player\Abby.mdl"
 
 $upaxis Y
 
-$model "Abby" "abby_reference.smd" {
+$model "Abby" "Abby_reference_2.smd" {
 
 	eyeball "eye_0" "head" -1.307000 69.259998 3.754999 "eyeball_r" 1.80356 0 "iris_unused" 0.7
 	eyeball "eye_1" "head" 1.307000 69.259998 3.754999 "eyeball_l" 1.80356 0 "iris_unused" 0.7
 
 
-	flexfile "abby.vta" 
+	flexfile "chell_01.vta" 
 	{
 		defaultflex frame 0
 		flex "death" frame 1
@@ -43,6 +43,7 @@ $model "Abby" "abby_reference.smd" {
 	%smile = smile
 	%sneer = sneer
 }
+
 
 $surfaceprop "flesh"
 
@@ -192,7 +193,7 @@ $sequence "ragdoll" {
 
 $includemodel "player/Chell_animations.mdl"
 
-$collisionjoints "abby_physics.smd"
+$collisionjoints "chell_physics.smd"
 {
 	$mass 94
 	$inertia 10

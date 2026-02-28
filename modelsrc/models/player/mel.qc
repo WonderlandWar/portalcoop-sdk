@@ -10,7 +10,7 @@ $model "Mel" "Mel_reference_2.smd" {
 	eyeball "eye_1" "head" 1.307000 69.259998 3.754999 "eyeball_l" 1.80356 0 "iris_unused" 0.7
 
 
-	flexfile "mel_01.vta" 
+	flexfile "chell_01.vta" 
 	{
 		defaultflex frame 0
 		flex "death" frame 1
@@ -44,12 +44,6 @@ $model "Mel" "Mel_reference_2.smd" {
 	%sneer = sneer
 }
 
-$texturegroup skinfamilies
-{
-	{ "chell_body_mp01_red"    "chell_body_mp01_red"   }
-	{ "chell_body_mp01_red"    "chell_body_mp01"   }
-	{ "chell_body_mp01_red"    "chell_body_mp01_green"   }
-}
 
 $surfaceprop "flesh"
 
@@ -199,7 +193,7 @@ $sequence "ragdoll" {
 
 $includemodel "player/Chell_animations.mdl"
 
-$collisionjoints "mel_physics.smd"
+$collisionjoints "chell_physics.smd"
 {
 	$mass 94
 	$inertia 10
