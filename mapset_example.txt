@@ -1,0 +1,12 @@
+"mapsets"
+{
+	"mapset_codename"
+	{
+		"name"				"Map Set Title"
+		"required_players"	"2"
+		"maps"
+		{
+			"map1" 	"Map 1 Title"
+		}
+	}
+}
