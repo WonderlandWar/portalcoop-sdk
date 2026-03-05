@@ -14,7 +14,7 @@ Prefix Meanings:
 Note: Using the Rexaura prefixes will force players to have Rexaura installed before they can play if sv_portal_game_update_on_map_load is enabled and sv_portal_game is set to 1.
 
 ### Creating custom map sets
-An example map set file can be found [here](https://www.moddb.com/mods/portal-cooperative/addons/old-3-player-maps).
+An example map set can be found [here](https://www.moddb.com/mods/portal-cooperative/addons/old-3-player-maps).
 
 #### Creating the map set
 1. Create a **custom** folder in your **portalcoop** folder.
