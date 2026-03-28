@@ -22,7 +22,7 @@ An example map set can be found [here](https://www.moddb.com/mods/portal-coopera
 3. Create a **scripts** and **materials** folder in the folder you just created.
 4. Create a **mapsets** folder in the scripts folder.
 5. Create a folder in the **mapsets** folder and name it to whatever you'd like.
-6. Create a .text file named **mapsets.txt** and copy and paste [this data](https://github.com/WonderlandWar/portalcoop-sdk/blob/main/mapset_example.txt) into your **mapsets.txt** file.   
+6. Create a .txt file named **mapsets.txt** and copy and paste [this data](https://github.com/WonderlandWar/portalcoop-sdk/blob/main/mapset_example.txt) into your **mapsets.txt** file.   
 7. Replace "mapset_codename" with whatever name you'd like.
 8. Change "Map Set Title" to the name of your map set, this is the title that is displayed in the menu.
 9. Set "required_players" to the amount of players that are needed to play the map.
